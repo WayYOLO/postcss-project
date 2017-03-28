@@ -1,0 +1,15 @@
+{
+  "name": "postcss-gulp-project",
+  "version": "1.0.0",
+  "description": "postcss build",
+  "main": "index.js",
+  "repository": "..",
+  "author": "way",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.4.0"
+  }
+}
