@@ -1,0 +1,15 @@
+
+/**
+ * variabes CSS原生变量
+ */
+
+:root {
+	--white: #fff;
+	--mainColor: red;
+	--info: green;
+}
+
+.variabels {
+    color: var(--info);
+    background: #fff;
+}

@@ -1,0 +1,9 @@
+/**
+ * system-ui CSS系统字体
+ */
+
+@import "_test.css";
+
+body {
+    font-family: system-ui;
+}

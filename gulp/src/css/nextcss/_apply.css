@@ -1,0 +1,15 @@
+
+/**
+ * apply CSS原生继承(mixins)
+ */
+
+:root {
+    --danger-theme: {
+        color: white;
+        background-color: red;
+    };
+}
+
+.apply {
+    @apply --danger-theme;
+}

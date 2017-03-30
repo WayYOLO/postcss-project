@@ -1,3 +1,16 @@
-.test{
-	color: red;
-}
+@charset "UTF-8";
+
+/**
+ * compile by postcss
+ */
+
+@import "nextcss/_variables";
+@import "nextcss/_apply";
+@import "nextcss/_nesting";
+@import "nextcss/_calc";
+@import "nextcss/_queries";
+@import "nextcss/_selectors";
+@import "nextcss/_color";
+@import "nextcss/_filter";
+@import "nextcss/_initial";
+@import "nextcss/_systemui";

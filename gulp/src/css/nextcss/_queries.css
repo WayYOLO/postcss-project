@@ -1,0 +1,19 @@
+/**
+ * media queries CSS原生媒体查询
+ */
+
+@custom-media --small-viewport (width <= 499px); /* max-width */
+
+@custom-media --only-medium-screen (width >= 500px) and (width <= 1200px);
+
+@media (--small-viewport) {
+    .queries {
+        color: red;
+    }
+}
+
+@media (--only-medium-screen) {
+    .queries {
+        color: green;
+    }
+}

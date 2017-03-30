@@ -1,0 +1,8 @@
+/**
+ * filter CSS滤镜
+ */
+
+.filter {
+    background: pink;
+    filter: blur(4px);
+}

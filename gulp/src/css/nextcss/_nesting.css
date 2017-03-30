@@ -1,0 +1,20 @@
+
+/**
+ * nesting CSS原生嵌套
+ */
+
+a {
+	color: black;
+
+	& .nesting {
+		color: red;
+	}
+
+	@nest .nesting & {
+		color: blue;
+	}
+
+	@media (max-width: 499px) {
+		color: yellow;
+	}
+}

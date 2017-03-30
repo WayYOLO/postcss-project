@@ -1,3 +1,292 @@
-.test{
-	color: red;
+@charset "UTF-8";
+
+/**
+ * compile by postcss
+ */
+
+/**
+ * variabes CSS原生变量
+ */
+
+.variabels {
+    color: green;
+    background: #fff;
 }
+
+/**
+ * apply CSS原生继承(mixins)
+ */
+
+.apply {
+    color: white;
+    background-color: red;
+}
+
+/**
+ * nesting CSS原生嵌套
+ */
+
+a {
+	color: black
+}
+
+a .nesting{
+    color: red;
+}
+
+.nesting a{
+    color: blue;
+}
+
+/**
+ * calc CSS原生计算
+ */
+
+.calc {
+    font-size: 32px;
+    font-size: 2rem;
+    width: -webkit-calc(100% - 100px);
+    width: calc(100% - 100px);
+    height: 35.3134px;
+}
+
+/**
+ * media queries CSS原生媒体查询
+ */
+
+/* max-width */
+
+/**
+ * custom selectors  CSS原生自定义选择器
+ */
+
+button,
+.button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.selector {
+    color: #563d7c;
+    background-color: transparent;
+    border-color: #563d7c;
+}
+
+.selector:hover,
+.selector:focus {
+    color: #fff;
+    background-color: #563d7c;
+    border-color: #563d7c;
+}
+
+/**
+ * color CSS原生颜色方法
+ */
+
+.color {
+	color: #ff0000;
+	color: rgba(255, 0, 0, 0.9)
+}
+
+.color:hover{
+    color: rgb(51, 0, 0);
+}
+
+/**
+ * filter CSS滤镜
+ */
+
+.filter {
+    background: pink;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+}
+
+/**
+ * initial CSS初始值
+ */
+
+.initial {
+    -webkit-animation: none 0s ease 0s 1 normal none running;
+         -o-animation: none 0s ease 0s 1 normal none running;
+            animation: none 0s ease 0s 1 normal none running;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+    background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+    border: medium none currentColor;
+    border-collapse: separate;
+    -webkit-border-image: none;
+         -o-border-image: none;
+            border-image: none;
+    border-radius: 0;
+    border-spacing: 0;
+    bottom: auto;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+    caption-side: top;
+    clear: none;
+    clip: auto;
+    color: #000;
+    -webkit-columns: auto;
+       -moz-columns: auto;
+            columns: auto;
+    -webkit-column-count: auto;
+       -moz-column-count: auto;
+            column-count: auto;
+    -webkit-column-fill: balance;
+       -moz-column-fill: balance;
+            column-fill: balance;
+    -webkit-column-gap: normal;
+       -moz-column-gap: normal;
+            column-gap: normal;
+    -webkit-column-rule: medium none currentColor;
+       -moz-column-rule: medium none currentColor;
+            column-rule: medium none currentColor;
+    -webkit-column-span: 1;
+       -moz-column-span: 1;
+            column-span: 1;
+    -webkit-column-width: auto;
+       -moz-column-width: auto;
+            column-width: auto;
+    content: normal;
+    counter-increment: none;
+    counter-reset: none;
+    cursor: auto;
+    direction: ltr;
+    display: inline;
+    empty-cells: show;
+    float: none;
+    font-family: serif;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: normal;
+    height: auto;
+    -webkit-hyphens: none;
+       -moz-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+    left: auto;
+    letter-spacing: normal;
+    list-style: disc outside none;
+    margin: 0;
+    max-height: none;
+    max-width: none;
+    min-height: 0;
+    min-width: 0;
+    opacity: 1;
+    orphans: 2;
+    outline: medium none invert;
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0;
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: auto;
+    -webkit-perspective: none;
+            perspective: none;
+    -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+    position: static;
+    right: auto;
+    -moz-tab-size: 8;
+      -o-tab-size: 8;
+         tab-size: 8;
+    table-layout: auto;
+    text-align: left;
+    -moz-text-align-last: auto;
+         text-align-last: auto;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    top: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none;
+    -webkit-transform-origin: 50% 50% 0;
+        -ms-transform-origin: 50% 50% 0;
+         -o-transform-origin: 50% 50% 0;
+            transform-origin: 50% 50% 0;
+    -webkit-transform-style: flat;
+            transform-style: flat;
+    -webkit-transition: none 0s ease 0s;
+    -o-transition: none 0s ease 0s;
+    transition: none 0s ease 0s;
+    unicode-bidi: normal;
+    vertical-align: baseline;
+    visibility: visible;
+    white-space: normal;
+    widows: 2;
+    width: auto;
+    word-spacing: normal;
+    z-index: auto;
+    all: initial;
+}
+
+/**
+ * system-ui CSS系统字体
+ */
+
+.test {
+    color: #eee;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+}
+
+@media (max-width: 499px){
+
+    a{
+        color: yellow;
+    }
+
+    .queries{
+        color: red;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1200px){
+
+    .queries{
+        color: green;
+    }
+}
+
+/*# sourceMappingURL=app.css.map */

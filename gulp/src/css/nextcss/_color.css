@@ -1,0 +1,13 @@
+
+/**
+ * color CSS原生颜色方法
+ */
+
+.color {
+	color: color(red alpha(-10%));
+
+	@nest &:hover {
+		color: color(red blackness(80%));
+	}
+}
+

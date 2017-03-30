@@ -1,0 +1,14 @@
+
+/**
+ * calc CSS原生计算
+ */
+
+:root {
+    --fontSize: 1rem;
+}
+
+.calc {
+    font-size: calc(var(--fontSize) * 2);
+    width: calc(100% - 100px);
+    height: calc(2 * 17.6567px);
+}

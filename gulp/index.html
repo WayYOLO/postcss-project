@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>postcss-project</title>
+	<link rel="stylesheet" href="dist/css/app.css">
+</head>
+<body style="width: 1200px ; margin:0 auto ;">
+	<h2 class="test">
+		test style 
+	</h2>
+	<div class="variabels">CSS原生变量</div>
+	<pre>
+:root {
+	--white: #fff;
+	--mainColor: red;
+	--info: yellow;
+}
+
+.variabels {
+    color: var(--info);
+    background: #fff;
+}
+	</pre>
+	<hr>
+	<label class="apply">CSS原生继承</label>
+	<pre>
+:root {
+    --danger-theme: {
+        color: white;
+        background-color: red;
+    };
+}
+
+.apply {
+    @apply --danger-theme;
+}
+	</pre>
+	<hr>
+	<div class="calc">CSS原生计算</div>
+	<pre>
+:root {
+    --fontSize: 1rem;
+}
+
+.calc {
+    font-size: calc(var(--fontSize) * 2);
+    width: calc(100% - 100px);
+    height: calc(2 * 17.6567px);
+}
+	</pre>
+	<hr>
+	<a href="#">
+		<span class="nesting">CSS原生嵌套</span>
+	</a>
+	<span class="nesting">
+		<a href="#">反嵌套</a>
+	</span>
+	<pre>
+ a { 
+  color: black;
+
+  & .nesting {
+    color: red;
+  }
+
+  @nest .nesting & {
+    color: blue;
+  }
+
+  @media (max-width: 499px) {
+    color: yellow;
+  }
+}
+	</pre>
+	<hr>
+	<div class="queries">CSS原生自定义媒体查询</div>
+	<pre>
+@custom-media --small-viewport (width <= 499px); /* max-width */
+
+@custom-media --only-medium-screen (width >= 500px) and (width <= 1200px);
+
+@media (--small-viewport) {
+    .queries{
+        color: red
+    }
+}	
+
+@media (--only-medium-screen){
+    .queries{
+        color: green
+    }
+}
+	</pre>
+	<hr>
+	<button class="selector">CSS原生自定义选择器</button>
+	<pre>
+@custom-selector :--button button, .button;
+@custom-selector :--enter :hover, :focus;
+:--button {
+	...
+}
+:--button:--enter {
+	..
+}
+.selector{
+    color: #563d7c;
+    background-color: transparent;
+    border-color: #563d7c;
+}
+.selector:--enter {
+    color: #fff;
+    background-color: #563d7c;
+    border-color: #563d7c;
+}
+	</pre>
+	<hr>
+	<div class="color">CSS原生颜色方法</div>
+	<pre>
+.color {
+	color: color(red alpha(-10%));
+	&:hover {
+		color: color(red blackness(80%))
+	}
+}
+	</pre>
+	<hr>
+	css滤镜
+	<div class="filter">...</div>
+	<pre>
+.filter {
+    background: pink;
+    filter: blur(4px);
+}
+	</pre>
+	<hr>
+	<div class="initial">CSS初始属性</div>
+	<pre>
+.initial{
+     all:initial;
+ }
+	</pre>
+</body>
+</html>	
