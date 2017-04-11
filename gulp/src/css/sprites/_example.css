@@ -1,0 +1,51 @@
+/**
+ * sprites 精灵图
+ */
+
+.icon-test1 {
+    background: url(../images/home/data-package.png) no-repeat 0 0;
+}
+
+.icon-test2 {
+    background: url(../images/home/SMS-package.png) no-repeat 0 0;
+}
+
+.icon-test3 {
+    background: url(../images/home/voice-package.png) no-repeat 0 0;
+}
+
+.icon-test4 {
+    background: url(../images/home/phone-blue.png) no-repeat 0 0;
+}
+
+.icon-test5 {
+    background: url(../images/home/phone-lightblue.png) no-repeat 0 0;
+}
+
+.icon-test6 {
+    background: url(../images/home/phone-purple.png) no-repeat 0 0;
+}
+
+.icon-test7 {
+    background: url(../images/home/phone-red.png) no-repeat 0 0;
+}
+
+.bg {
+    background: url(../images/bg.png) no-repeat 0 0;
+}
+
+.icon-test8 {
+    background: url(../images/login/letter-bg.png) no-repeat 0 0;
+}
+
+.icon-test9 {
+    background: url(../images/login/logo.png) no-repeat 0 0;
+}
+
+.icon-test10 {
+    background: url(../images/login/letter-logo.png) no-repeat 0 0;
+}
+
+.icon-test11 {
+    background: url(../images/login/login-logo.png) no-repeat 0 0;
+}

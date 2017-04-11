@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import path from 'path';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
@@ -7,6 +8,7 @@ import precss from 'precss';
 import reporter from 'postcss-reporter';
 import stylelint from 'stylelint';
 import cssimport from 'postcss-import';
+import sprites from 'postcss-sprites';
 import mqpacker from 'css-mqpacker';
 import browserSync from 'browser-sync';
 
@@ -14,12 +16,34 @@ import browserSync from 'browser-sync';
 // let reload = create.reload;
 
 gulp.task('css',() => {
+	const spriteDirs = [
+		'home',
+		'login'
+	]
 	const plugins = [
 		// autoprefixer({browsers:['last 3 version']}), //postcss-cssnext已包含autoprefixer，可不引入
 		// stylelint,
 		cssimport,
 		cssnext,
 		// precss,
+		sprites({
+			stylesheetPath:'./dist/css',
+			spritePath:'./dist/images',
+			filterBy: function(image) {
+				var dirNames = spriteDirs.join('|');
+				if (image.url.match('../images/(?:'+dirNames+')'))
+				return Promise.resolve();
+				return Promise.reject();
+			},
+			groupBy: function(image) {
+				return Promise.resolve(image.url.match(/images\/([^\/]+)\//)[1]);
+			},
+			hooks:{
+				onSaveSpritesheet: function(opts, groupsInfo) {
+					return path.join(opts.spritePath, 'sprite-' + groupsInfo.groups.join('.') + '.png');
+				}
+			}
+		}),
 		mqpacker
 
 	];

@@ -4,6 +4,8 @@
  * compile by postcss
  */
 
+/* cssnext */
+
 @import "nextcss/_variables";
 @import "nextcss/_apply";
 @import "nextcss/_nesting";
@@ -14,3 +16,7 @@
 @import "nextcss/_filter";
 @import "nextcss/_initial";
 @import "nextcss/_systemui";
+
+/* sprites */
+
+@import "sprites/_example";
